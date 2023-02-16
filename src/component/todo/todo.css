@@ -1,0 +1,8 @@
+body {
+  background-size: cover;
+  background-color: #cccccc !important;
+  background-repeat: no-repeat;
+}
+background-img {
+  opacity: 0.5;
+}

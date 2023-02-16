@@ -24,7 +24,7 @@ import "./home.css";
 
 export const Home = () => {
   return (
-    <body>
+    <div className="body">
       <div className="App">
         <header>
           <Box sx={{ flexGrow: 1 }}>
@@ -360,7 +360,7 @@ export const Home = () => {
           </div>
         </header>
       </div>
-    </body>
+    </div>
   );
 };
 
