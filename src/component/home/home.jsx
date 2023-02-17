@@ -27,35 +27,7 @@ export const Home = () => {
     <div className="body">
       <div className="App">
         <header>
-          <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" color="secondary">
-              <Toolbar>
-                <IconButton
-                  size="large"
-                  edge="start"
-                  color="inherit"
-                  aria-label="menu"
-                  sx={{ mr: 2 }}
-                >
-                  <MenuIcon />
-                </IconButton>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  My Home Page
-                </Typography>
-
-                <Box
-                  sx={{
-                    "& > :not(style)": {
-                      m: 2,
-                    },
-                  }}
-                >
-                  <HomeIcon />
-                </Box>
-              </Toolbar>
-            </AppBar>
-          </Box>
-
+          <br></br>
           <h1>Fraidy Kuperman</h1>
 
           <p class="p">
