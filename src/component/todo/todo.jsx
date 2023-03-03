@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./todo.css";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -11,21 +11,12 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { purple } from "@mui/material/colors";
 import Fab from "@mui/material/Fab";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import { TodoContext } from "../../state/todo/todo-context";
+import { TodoActions } from "../../state/todo/todo.reducer";
 
 export const Todo = () => {
   const [input, setInput] = useState("");
-  const [todos, setTodos] = useState([
-    {
-      title: "College Homework",
-      isComplete: false,
-    },
-
-    { title: "Hang out With Friends", isComplete: true },
-    { title: "Buy new Shoes", isComplete: false },
-    { title: "Bake Cookies", isComplete: false },
-    { title: "Visit Grandparents", isComplete: false },
-    { title: "Do Excercise", isComplete: true },
-  ]);
+  const { todoState, todoDispatch } = useContext(TodoContext);
 
   const onInput = (event) => {
     console.log(event.target.value);
@@ -33,21 +24,22 @@ export const Todo = () => {
   };
 
   const addTodo = () => {
-    setTodos([...todos, { title: input, isComplete: false }]);
+    todoDispatch({
+      type: TodoActions.ADD,
+      todo: { title: input, isComplete: false },
+    });
     setInput("");
   };
 
-  const deleteTodo = (index) => {
-    const newTodos = [...todos];
-    newTodos.splice(index, 1);
-    setTodos(newTodos);
+  const deleteTodo = (todo) => {
+    todoDispatch({
+      type: TodoActions.DELETE,
+      todo,
+    });
   };
 
   const toggleChecked = (todo) => {
-    const newTodos = [...todos];
-    const updatedTodo = newTodos.find((x) => x.title === todo.title);
-    updatedTodo.isComplete = !todo.isComplete;
-    setTodos(newTodos);
+    todoDispatch({ type: TodoActions.TOGGLE, todo });
   };
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
@@ -83,7 +75,7 @@ export const Todo = () => {
       </div>
       <br></br>
       <div className="tasks">
-        {todos.map((todo, index) => (
+        {todoState.todos.map((todo, index) => (
           <p key={index} index={index} deleteTodo={deleteTodo} draggable>
             <Checkbox
               {...label}
@@ -124,6 +116,13 @@ export const Todo = () => {
           </Fab>
         </Box>
       </div>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <br></br>
       <br></br>
       <br></br>
