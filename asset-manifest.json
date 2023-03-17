@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mcon-353-demo-site/static/css/main.f17a05ec.css",
+    "main.js": "/mcon-353-demo-site/static/js/main.c4ab8b62.js",
+    "static/js/787.5d944677.chunk.js": "/mcon-353-demo-site/static/js/787.5d944677.chunk.js",
+    "index.html": "/mcon-353-demo-site/index.html",
+    "main.f17a05ec.css.map": "/mcon-353-demo-site/static/css/main.f17a05ec.css.map",
+    "main.c4ab8b62.js.map": "/mcon-353-demo-site/static/js/main.c4ab8b62.js.map",
+    "787.5d944677.chunk.js.map": "/mcon-353-demo-site/static/js/787.5d944677.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f17a05ec.css",
+    "static/js/main.c4ab8b62.js"
+  ]
+}
