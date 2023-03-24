@@ -16,34 +16,6 @@
   text-align: left;
 }
 
-/*.container {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.dropdown-menu {
-  width: fit-content;
-}
-.addButton {
-  display: inline-flex;
-  flex-direction: row;
-}
-
-*/
-
-/*.container {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 1;
-}
-*/
-
 .sendButton {
   display: flex;
   align-items: center;

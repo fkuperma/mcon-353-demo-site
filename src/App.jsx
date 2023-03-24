@@ -11,20 +11,9 @@ import { Chat } from "./component/chat/chat";
 
 function App() {
   const [todoState, todoDispatch] = useReducer(todoReducer, {
-    todos: [
-      //{
-      //  title: "College Homework",
-      // isComplete: false,
-      //},
-      //{ title: "Hang out With Friends", isComplete: true },
-      //{ title: "Buy new Shoes", isComplete: false },
-      //{ title: "Bake Cookies", isComplete: false },
-      //{ title: "Visit Grandparents", isComplete: false },
-      //{ title: "Do Excercise", isComplete: true },
-    ],
+    todos: [],
   });
 
-  //const [todos, setTodos] = useState();
   return (
     <HashRouter>
       <Header />

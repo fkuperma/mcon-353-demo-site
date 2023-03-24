@@ -53,7 +53,6 @@ export const Chat = () => {
       });
   }
   function postMessage() {
-    //only do this if exists a current chat, cld also just do if (currentChat)
     if (currentChat != null) {
       const message = {
         chatId: currentChat.id, // required, must be an existing chat id
